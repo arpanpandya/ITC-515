@@ -13,12 +13,11 @@ public class cgCTL {
 	public void execute() {
 		CGUI = new cgUI(this);
 		CGUI.setState1(false);
-
 		CGUI.setState2(false);
 		CGUI.setState3(false);
 		CGUI.setState4(false);
 		CGUI.setState5(false);
-		CGUI.setState6(false);
+		CGUI.setState6(true);
 		CGUI.Refresh3();
 
 		ListUnitsCTL luCTL = new ListUnitsCTL();
@@ -59,7 +58,7 @@ public class cgCTL {
 			CGUI.setState3(true);
 			CGUI.setState4(true);
 			CGUI.setState5(false);
-			CGUI.setState6(false);
+			CGUI.setState6(true);
 			changed = false;
 
 		}
@@ -95,6 +94,6 @@ public class cgCTL {
 		StudentUnitRecordManager.instance().saveRecord(r);
 		CGUI.setState4(true);
 		CGUI.setState5(false);
-		CGUI.setState6(false);
+		CGUI.setState6(true);
 	}
 }
