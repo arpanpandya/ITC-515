@@ -1,5 +1,5 @@
 package datamanagement;
-
+// define the class student.
 public class Student implements IStudent {
     private Integer id; private String fn;
             private String ln;
@@ -10,7 +10,7 @@ public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { t
         su == null ? new StudentUnitRecordList() : 
                 su;
 }
-
+//using the getter method for getting id and Firstname and return firstname.
     public Integer getID() { return this.id; 
 } public String getFirstName() { 
 return fn; }
