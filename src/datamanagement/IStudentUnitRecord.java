@@ -1,7 +1,7 @@
 package datamanagement;
 
 public interface IStudentUnitRecord {
-
+// using the getter and setter method for getting the student id and student marks.
     public Integer getStudentID();
     public String getUnitCode();
 
@@ -13,6 +13,6 @@ public interface IStudentUnitRecord {
 
     public void setExam(float mark);
     public float getExam();
-
+// get the total marks.
     public float getTotal();
 }
