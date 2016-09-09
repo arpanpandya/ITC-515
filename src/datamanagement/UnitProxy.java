@@ -1,5 +1,5 @@
 package datamanagement;
-public class UnitProxy implements IUnit {
+public class UnitProxy implements IUnit { // class defined.
 private String UC;
         private String un;
 
@@ -10,14 +10,14 @@ private String UC;
         this.UC = unitCode;
             this.un = unitName;
                 um = UnitManager.UM(); }
-    public String getUnitCode() { 
+    public String getUnitCode() {  //return loop used
         return this.UC;}
         public String getUnitName() { 
             return this.un; 
         }
     public void setPsCutoff1(float cutoff) {
         um.getUnit(UC).setPsCutoff1(cutoff);
-}
+} // getter and setter method used.
 public float getPsCutoff() {
         return um.getUnit(UC).getPsCutoff();}
     public void setCrCutoff(float cutoff) {um.getUnit(UC).setCrCutoff(cutoff);
