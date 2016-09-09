@@ -1,6 +1,6 @@
 package datamanagement;
 
-public class Unit implements IUnit {
+public class Unit implements IUnit { // public class unit impleament.
 	private String uc;
 	private String UN;
 	private float co2;
@@ -14,7 +14,7 @@ public class Unit implements IUnit {
 
 	public Unit(String UC, String un, float f1, float f2, float f3, float f4,
 			float f5, int i1, int i2, int i3, StudentUnitRecordList rl) {
-
+// object created.
 		uc = UC;
 		UN = un;
 		co2 = f1;
@@ -54,7 +54,7 @@ public class Unit implements IUnit {
 	public void setDiCutoff(float cutoff) {
 		this.co4 = cutoff;
 	}
-
+// return method used
 	public float getDiCuttoff() {
 		return this.co4;
 	}
