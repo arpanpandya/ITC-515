@@ -2,7 +2,7 @@ package datamanagement;
 
 import java.util.List;
 import org.jdom.*;
-
+// Define the class studentunitrecord manager.
 public class StudentUnitRecordManager {
 
 private static StudentUnitRecordManager s = null;
@@ -10,7 +10,7 @@ private static StudentUnitRecordManager s = null;
     private java.util.HashMap<String,StudentUnitRecordList> ur;
 private java.util.HashMap<Integer,StudentUnitRecordList> sr;
     public static StudentUnitRecordManager instance() {
-        if (s == null ) s = new StudentUnitRecordManager(); return s;}
+        if (s == null ) s = new StudentUnitRecordManager(); return s;}// True and falsh condition used .
             private StudentUnitRecordManager() {
         rm = new StudentUnitRecordMap();
     ur = new java.util.HashMap<>();
@@ -20,7 +20,7 @@ IStudentUnitRecord ir = rm.get(studentID.toString()+unitCode);
 return ir != null ? ir : createStudentUnitRecord(studentID, unitCode);}
 
     private IStudentUnitRecord createStudentUnitRecord( Integer uid, String sid ) {
-        IStudentUnitRecord ir;
+        IStudentUnitRecord ir; // for loop used
         for (Element el : (List<Element>) XMLManager.getXML().getDocument().getRootElement().getChild("studentUnitRecordTable").getChildren("record")) {
         if (uid.toString().equals(el.getAttributeValue("sid")) && sid.equals(el.getAttributeValue("uid"))) {
                 ir = new StudentUnitRecord( new Integer(el.getAttributeValue("sid")),el.getAttributeValue("uid"),new Float(el.getAttributeValue("asg1")).floatValue(),new Float(el.getAttributeValue("asg2")).floatValue(),new Float(el.getAttributeValue("exam")).floatValue() );
