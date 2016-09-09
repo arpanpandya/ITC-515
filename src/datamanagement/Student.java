@@ -1,16 +1,16 @@
 package datamanagement;
-
+// impleament the class of student.
 public class Student implements IStudent {
     private Integer id; private String fn;
             private String ln;
 private StudentUnitRecordList su;
 
 public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { this.id = id; this.fn = fn;
-        this.ln = ln;this.su = 
+        this.ln = ln;this.su = // variable define 
         su == null ? new StudentUnitRecordList() : 
                 su;
 }
-
+// getter and setter method used.
     public Integer getID() { return this.id; 
 } public String getFirstName() { 
 return fn; }
